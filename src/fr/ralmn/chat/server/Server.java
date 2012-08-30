@@ -121,6 +121,10 @@ public class Server {
 		return PluginManager.getInstance().getPlugins();
 	
 	}
+
+	public PluginManager getPluginManager() {
+		return PluginManager.getInstance();
+	}
 	
 	
 

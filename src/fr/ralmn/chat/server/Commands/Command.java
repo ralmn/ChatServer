@@ -1,5 +1,7 @@
 package fr.ralmn.chat.server.Commands;
 
+import fr.ralmn.chat.server.Server;
+
 
 public class Command {
 
@@ -21,6 +23,10 @@ public class Command {
 
 	public void showDescription(Sender sender) {
 		sender.sendMessageServer(usage);
+	}
+	
+	public Server getServer(){
+		return Server.getInstance();
 	}
 
 }
