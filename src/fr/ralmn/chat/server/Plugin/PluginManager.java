@@ -30,13 +30,21 @@ public class PluginManager {
 
 	}
 
-	public void reloadPlugin() {
+	public void reloadPlugins() {
 
 		disablePlugins();
 
 		loadPlugins();
 
 	}
+	
+	public void reloadPlugin(String name) {
+		if(plugins.containsKey(name)){
+			plugins.get(name).onEnable();
+			plugins.get(name).onDisable();
+		}
+	}
+
 
 	public void disablePlugins() {
 		for (String s : plugins.keySet()) {
@@ -190,5 +198,6 @@ public class PluginManager {
 		}
 		return plugins;
 	}
+
 
 }

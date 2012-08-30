@@ -8,7 +8,15 @@ public class ReloadCommand extends Command {
 
 	@Override
 	public boolean onCommand(Sender sender, String[] args) {
-		return super.onCommand(sender, args);
+		
+		if(args.length < 1)
+		getServer().getPluginManager().reloadPlugins();
+		else{
+			getServer().getPluginManager().reloadPlugin(args[0]);
+		}
+		
+	
+		return true;
 	}
 
 	 

@@ -10,6 +10,7 @@ import fr.ralmn.chat.server.Commands.CommandManager;
 import fr.ralmn.chat.server.Commands.KickCommand;
 import fr.ralmn.chat.server.Commands.ListCommand;
 import fr.ralmn.chat.server.Commands.PluginCommand;
+import fr.ralmn.chat.server.Commands.ReloadCommand;
 import fr.ralmn.chat.server.Commands.ServerCommandListener;
 import fr.ralmn.chat.server.Commands.User;
 import fr.ralmn.chat.server.Commands.UserCommand;
@@ -72,6 +73,7 @@ public class ServerMain {
 		cm.registerCommand("broadcast", new BroadcastCommand());
 		cm.registerCommand("user", new UserCommand());
 		cm.registerCommand("plugin", new PluginCommand());
+		cm.registerCommand("reload", new ReloadCommand());
 		
 	}
 	public static boolean isConnecting(String name) {
